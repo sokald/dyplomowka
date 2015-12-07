@@ -1,0 +1,16 @@
+﻿dom,home
+przyjaciel,friend
+pomoc, help
+imię, name
+szkoła, school
+dziecko,child
+mieć,have
+powiedzieć,tell
+dodać,add
+nowy,new
+ruszać,move
+oni,they
+być,be
+chłopiec,boy
+stary,old
+jeden,one
