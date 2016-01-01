@@ -29,12 +29,12 @@ namespace ang
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 AngGame;
+            Ang AngGame;
             
             //check level and choose sieze window
             if (level == 1)
             {
-                AngGame = new Form1(level);
+                AngGame = new Ang(level);
                 AngGame.Size = new Size(295, 280);
                 this.Hide();
                 AngGame.Show();
@@ -42,7 +42,7 @@ namespace ang
             }
             if (level == 2)
             {
-                AngGame = new Form1(level);
+                AngGame = new Ang(level);
                 AngGame.Size = new Size(295, 300);
                 this.Hide();
                 AngGame.Show();
@@ -50,7 +50,7 @@ namespace ang
             }
             if (level == 3)
             {
-                AngGame = new Form1(level);
+                AngGame = new Ang(level);
                 AngGame.Size = new Size(295, 350);
                 this.Hide();
                 AngGame.Show();
@@ -65,12 +65,12 @@ namespace ang
             if(i==-1)
             {
                 timer1.Stop();
-                Form1 AngGame;
+                Ang AngGame;
 
                 //check level and choose sieze window
                 if (level == 1)
                 {
-                    AngGame = new Form1(level);
+                    AngGame = new Ang(level);
                     AngGame.Size = new Size(295, 280);
                     this.Hide();
                     AngGame.Show();
@@ -78,7 +78,7 @@ namespace ang
                 }
                 if (level == 2)
                 {
-                    AngGame = new Form1(level);
+                    AngGame = new Ang(level);
                     AngGame.Size = new Size(295, 300);
                     this.Hide();
                     AngGame.Show();
@@ -86,7 +86,7 @@ namespace ang
                 }
                 if (level == 3)
                 {
-                    AngGame = new Form1(level);
+                    AngGame = new Ang(level);
                     AngGame.Size = new Size(295, 350);
                     this.Hide();
                     AngGame.Show();

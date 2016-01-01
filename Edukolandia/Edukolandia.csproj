@@ -47,16 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,10 +82,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ang\ang.csproj">
+    <ProjectReference Include="..\ang\Ang.csproj">
       <Project>{ecd2ed82-0033-4195-ab0e-0fe9afc44bf6}</Project>
-      <Name>ang</Name>
+      <Name>Ang</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Ortografia\Ortografia.csproj">
+      <Project>{c5c9ca7d-5bb2-4511-87b8-3aa52a89e71c}</Project>
+      <Name>Ortografia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SlidePuzzle\SlidePuzzle.csproj">
+      <Project>{4daf6ab8-a72b-4ea0-af6c-744efbfac8d7}</Project>
+      <Name>SlidePuzzle</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
