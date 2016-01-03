@@ -160,7 +160,11 @@ namespace SlidePuzzle
 
                 //turn off other buttons
                 for (i = 9; i < 25; i++)
-                    buttonTbl[i].Enabled = buttonTbl[i].Visible = false; 
+                    buttonTbl[i].Enabled = buttonTbl[i].Visible = false;
+
+                //radnom location for buttons
+                for (i = 0; i < 50; i++)
+                    drawLocation(9);
             }
 
             if(lev == 2)
@@ -202,7 +206,11 @@ namespace SlidePuzzle
 
                 //turn off other buttons
                 for (i = 16; i < 25; i++)
-                    buttonTbl[i].Enabled = buttonTbl[i].Visible = false; 
+                    buttonTbl[i].Enabled = buttonTbl[i].Visible = false;
+
+                //radnom location for buttons
+                for (i = 0; i < 50; i++)
+                    drawLocation(15);
             }
 
             if(lev == 3)
@@ -251,9 +259,44 @@ namespace SlidePuzzle
 
                 //turn off the empty button
                 button25.Enabled = false;
+
+                //radnom location for buttons
+                //for (i = 0; i < 50; i++ )
+                    drawLocation(buttonTbl.Length);
             }
         }
 
+        //for random positions
+        Random Rand = new Random();
+
+        int firstNumber, secondNumber;
+        Button btnForSwap;
+        Button btnForSwap2;
+
+        //random location for buttons
+        public void drawLocation(int amountButtons)
+        {
+            //random numbers for swap
+            firstNumber = Rand.Next(amountButtons);
+            secondNumber = Rand.Next(amountButtons);
+
+            firstNumber = 7;
+            secondNumber = 8;
+
+            //swap locations buttons
+            buttonTbl[firstNumber].Location = netPoint[secondNumber];
+            buttonTbl[secondNumber].Location = netPoint[firstNumber];
+
+            //swap buttons
+            btnForSwap = buttonTbl[firstNumber];
+            
+            btnForSwap2 = buttonTbl[secondNumber];
+            
+            buttonTbl[secondNumber] = btnForSwap;
+            buttonTbl[firstNumber] = btnForSwap2;
+        }
+        
+        //varibles for clicked button
         Button clickedButton;
 
         //check null and swap buttons
@@ -457,6 +500,75 @@ namespace SlidePuzzle
             catch(Exception e)
             {
                 MessageBox.Show("Błąd aplikacji");
+            }
+
+            switch(level)
+            {
+                case 1:
+                    //check finished game
+                    if (btnTurnOff == buttonTbl[8])
+                    {
+                        Button[] buttonTbl2 = new Button[] { button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16, button17, button18, button19, button20, button21, button22, button23, button24, button25 };
+
+                        if (buttonTbl.Length == buttonTbl2.Length)
+                        {
+                            bool score = true;
+                            for (i = 0; i < buttonTbl.Length; i++)
+                            {
+                                if (buttonTbl[i] != buttonTbl2[i])
+                                {
+                                    score = false;
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Błąd programu, aplikacja zostanie zamknięta");
+                            this.Close();
+                        }    
+                    }
+                    break;
+
+                case 2:
+                    //check finished game
+                    if (btnTurnOff == buttonTbl[14])
+                    {
+                        Button[] buttonTbl2 = new Button[] { button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16, button17, button18, button19, button20, button21, button22, button23, button24, button25 };
+
+                        for (i = 0; i < buttonTbl.Length; i++)
+                        {
+                            if (buttonTbl[i] != buttonTbl2[i])
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Brawo! gra zakończona");
+                            }
+                        }
+                    }
+                    break;
+
+                case 3:
+                    //check finished game
+                    if (btnTurnOff == buttonTbl[buttonTbl.Length-1])
+                    {
+                        Button[] buttonTbl2 = new Button[] { button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16, button17, button18, button19, button20, button21, button22, button23, button24, button25 };
+
+                        for( i=0; i< buttonTbl.Length; i++)
+                        {
+                            if (buttonTbl[i] != buttonTbl2[i])
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Brawo! gra zakończona");
+                            }
+                        }
+                    }
+                    break;
             }
         }
 
