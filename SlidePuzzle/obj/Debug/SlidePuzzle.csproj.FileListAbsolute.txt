@@ -34,3 +34,6 @@ C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\bi
 C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\bin\Debug\SlidePuzzle.exe
 C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\bin\Debug\SlidePuzzle.pdb
 C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\obj\Debug\SlidePuzzle.csprojResolveAssemblyReference.cache
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\bin\Debug\timesLevel1.txt
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\bin\Debug\timesLevel2.txt
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\bin\Debug\timesLevel3.txt

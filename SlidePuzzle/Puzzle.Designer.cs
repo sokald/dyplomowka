@@ -56,7 +56,8 @@
             this.button25 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.stopWatch = new System.Windows.Forms.Timer(this.components);
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -338,10 +339,11 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 281);
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 300);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(299, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(319, 22);
             this.statusStrip1.TabIndex = 25;
             this.statusStrip1.Text = "Maciej Brant v0.1";
             // 
@@ -351,15 +353,24 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(124, 17);
             this.toolStripStatusLabel1.Text = "Maciej Brant 2015 v0.1";
             // 
-            // timer1
+            // stopWatch
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.stopWatch.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(149, 17);
+            this.toolStripStatusLabel2.Spring = true;
+            this.toolStripStatusLabel2.Text = "00";
+            this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Puzzle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 303);
+            this.ClientSize = new System.Drawing.Size(319, 322);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.button25);
             this.Controls.Add(this.button24);
@@ -425,7 +436,8 @@
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer stopWatch;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
 
     }
 }

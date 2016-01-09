@@ -44,7 +44,7 @@ namespace ang
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2Time = new System.Windows.Forms.ToolStripStatusLabel();
             this.stopWatch = new System.Windows.Forms.Timer(this.components);
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -150,7 +150,7 @@ namespace ang
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
+            this.toolStripStatusLabel2Time});
             this.statusStrip1.Location = new System.Drawing.Point(0, 289);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(274, 22);
@@ -165,12 +165,12 @@ namespace ang
             // 
             // toolStripStatusLabel2
             // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(159, 17);
-            this.toolStripStatusLabel2.Spring = true;
-            this.toolStripStatusLabel2.Text = "0.0";
-            this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripStatusLabel2Time.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2Time.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripStatusLabel2Time.Size = new System.Drawing.Size(159, 17);
+            this.toolStripStatusLabel2Time.Spring = true;
+            this.toolStripStatusLabel2Time.Text = "0.0";
+            this.toolStripStatusLabel2Time.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // stopWatch
             // 
@@ -257,7 +257,7 @@ namespace ang
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2Time;
         private System.Windows.Forms.Timer stopWatch;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;

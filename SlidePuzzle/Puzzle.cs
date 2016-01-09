@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,10 +51,10 @@ namespace SlidePuzzle
         //constructor without parameters
         public Puzzle()
         {
-            InitializeComponent();
+            //save file with timers
+            fileWithTimes = @"timesLevel1.txt";
 
-            buttonTbl = new Button[] { button1, button2, button3, button4, button5, button6, button7, button8, button9};
-
+            //declarate place for buttons
             P1 = new Point(13, 13);
             P2 = new Point(69, 12);
             P3 = new Point(125, 12);
@@ -63,22 +64,38 @@ namespace SlidePuzzle
             P7 = new Point(13, 125);
             P8 = new Point(69, 125);
             P9 = new Point(125, 125);
-            
+
+            //table for net points
             netPoint = new Point[] { P1, P2, P3, P4, P5, P6, P7, P8, P9 };
 
-            button1.Text = "1";
-            button2.Text = "2";
-            button3.Text = "3";
-            button4.Text = "4";
-            button5.Text = "5";
-            button6.Text = "6";
-            button7.Text = "7";
-            button8.Text = "8";
+            //location buttons in net
+            for (i = 0; i < 9; i++)
+                buttonTbl[i].Location = netPoint[i];
+
+            //make text on buttons
+            for (i = 0; i < 9; i++)
+                buttonTbl[i].Text = (1 + i).ToString();
+
+            //set text on the empty button
             button9.Text = null;
+
+            //turn off the empty button
+            button9.Enabled = false;
+
+            //turn off other buttons
+            for (i = 9; i < 25; i++)
+                buttonTbl[i].Enabled = buttonTbl[i].Visible = false;
+
+            //radnom location for buttons
+            for (i = 0; i < 50; i++)
+                drawLocation(9);
         }
 
         // global varible for level
         int level;
+
+        //varible for save location file with times
+        string fileWithTimes;
 
         //constructor with parameters
         public Puzzle(int lev)
@@ -88,11 +105,20 @@ namespace SlidePuzzle
             //declarate level in global varible
             level = lev;
 
+            //reset varibles for time
+            sekond = miliSekond = 0;
+
+            //turn on stopWatch
+            stopWatch.Start();   
+
             //declarate 
             buttonTbl = new Button[] { button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16, button17, button18, button19, button20, button21, button22, button23, button24, button25 };
 
             if(lev == 1)
-            {       
+            {
+                //save file with timers
+                fileWithTimes = @"timesLevel1.txt";
+
                 //declarate place for buttons
                 P1 = new Point(13, 13);
                 P2 = new Point(69, 12);
@@ -132,6 +158,9 @@ namespace SlidePuzzle
 
             if(lev == 2)
             {
+                //save file with timers
+                fileWithTimes = @"timesLevel2.txt";
+                
                 //declarate place for buttons
                 P1 = new Point(13, 13);
                 P2 = new Point(69, 12);
@@ -181,6 +210,9 @@ namespace SlidePuzzle
 
             if(lev == 3)
             {
+                //save file with timers
+                fileWithTimes = @"timesLevel3.txt";
+
                 //declarate place for buttons
                 P1 = new Point(13, 13);
                 P2 = new Point(69, 12);
@@ -427,6 +459,20 @@ namespace SlidePuzzle
             }
         }
 
+        //for read and save time in file
+        FileStream fileStreamTime;
+        StreamWriter streamWriterTime;
+
+        double time = 0;
+        double timeFromFile = 0;
+        StreamReader streamReaderTimer;
+
+        //for storage times in memory
+        double[] timeList = new double[10];
+        string line, timeResults;
+
+        int number;
+
         //check finish game
         public void checkFinish()
         {
@@ -454,8 +500,133 @@ namespace SlidePuzzle
 
             if (score)
             {
-                MessageBox.Show("koniec gry");
+                stopWatch.Stop();
+
+                //save file
+                fileStreamTime = new FileStream(fileWithTimes, FileMode.Open, FileAccess.Read);
+
+                try
+                {
+                    streamReaderTimer = new StreamReader(fileStreamTime);
+
+                    i = 0;
+                    while ((line = streamReaderTimer.ReadLine()) != null && i < 10)
+                    {
+                        //streamReaderTimer.ReadLine();
+                        timeList[i] = Convert.ToDouble(line);
+                        i++;
+                    }
+                    fileStreamTime.Close();
+
+                    //current time
+                    time = Convert.ToDouble(sekond + "," + miliSekond);
+
+                    //comparing time and search better time
+                    for (i = 0; i < timeList.Count(); i++)
+                    {
+                        if (time < timeList[i] || timeList[i] == 0)
+                        {
+                            //trzeba przesynac cala tablice
+                            for (int j = 8; j >= i; j--)
+                            {
+                                number = j;
+                                number++;
+                                timeList[number] = timeList[j];
+                            }
+                            //new time in table
+                            timeList[i] = time;
+
+                            //save to file new times
+                            fileStreamTime = new FileStream(fileWithTimes, FileMode.Open, FileAccess.Write);
+                            streamWriterTime = new StreamWriter(fileStreamTime);
+                            //save time in file
+                            for (i = 0; i < 10; i++)
+                            {
+                                streamWriterTime.WriteLine(timeList[i]);
+                            }
+                            streamWriterTime.Close();
+                            break;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("blad aplikacji, program zostanie zamkniety");
+                }
+
+                //read time
+                fileStreamTime = new FileStream(fileWithTimes, FileMode.Open, FileAccess.Read);
+                try
+                {
+                    streamReaderTimer = new StreamReader(fileStreamTime);
+
+                    i = 0;
+                    while ((line = streamReaderTimer.ReadLine()) != null && i < 10)
+                    {
+                        //streamReaderTimer.ReadLine();
+                        timeList[i] = Convert.ToDouble(line);
+
+                        timeResults += i + 1 + ".  " + timeList[i] + "\n";
+                        i++;
+                    }
+                    fileStreamTime.Close();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Błąd aplikacji, program zostanie zamkniety");
+                }
+
+                DialogResult result;
+                //message box
+                result = MessageBox.Show("Brawo!! gra zakończona, twój wynik to:  " + sekond + "," + miliSekond.ToString() + "s \nNajlepsze wyniki: \n" + timeResults, "zakończyć?", MessageBoxButtons.RetryCancel);
+
+                if (result == System.Windows.Forms.DialogResult.Retry)
+                {
+                    //restart game
+                    SlidePuzzle.Puzzle game = new Puzzle(level);
+                    switch (level)
+                    {
+                        case 1:
+                            game.Size = new Size(205, 245);
+                            break;
+                        case 2:
+                            game.Size = new Size(260, 300);
+                            break;
+                        case 3:
+                            game.Size = new Size(315, 355);
+                            break;
+                        default:
+                            MessageBox.Show("Błąd programu");
+                            break;
+                    }           
+                    this.Hide();
+                    game.Show();
+                    this.Close();
+                }
+
+                if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    //close game
+                    this.Hide();
+                    this.Close();
+                }
             }
+        }
+        
+        //declarate varibles for time
+        int sekond;
+        short miliSekond;
+
+        //timer for measure game time
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (miliSekond > 9)
+            {
+                sekond++;
+                miliSekond = 0;
+            }
+            toolStripStatusLabel2.Text = sekond + "," + miliSekond.ToString();
+            miliSekond++;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -581,12 +752,6 @@ namespace SlidePuzzle
         private void button25_Click(object sender, EventArgs e)
         {
 
-        }
-
-        //timer for measure game time
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
+        }              
     }
 }

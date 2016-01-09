@@ -17,4 +17,3 @@ C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.exe
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.pdb
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.csprojResolveAssemblyReference.cache
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.csprojResolveAssemblyReference.cache

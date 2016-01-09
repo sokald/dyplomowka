@@ -25,4 +25,3 @@ C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\ang\obj\Debug\A
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\ang\obj\Debug\ang.exe
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\ang\obj\Debug\ang.pdb
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\ang\obj\Debug\Ang.csprojResolveAssemblyReference.cache
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\ang\obj\Debug\Ang.csprojResolveAssemblyReference.cache

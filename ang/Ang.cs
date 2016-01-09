@@ -64,7 +64,7 @@ namespace ang
         {
             InitializeComponent();
             
-            //turn of form edukolandia
+            //turn on form edukolandia
 
             sekond= miliSekond =0;
 
@@ -235,7 +235,7 @@ namespace ang
                 )
             {
                 stopWatch.Stop();
-                toolStripStatusLabel2.Text = sekond + "," + miliSekond.ToString();
+                toolStripStatusLabel2Time.Text = sekond + "," + miliSekond.ToString();
 
                 //save file
                 fileStreamTime = new FileStream(fileWithTimes, FileMode.Open, FileAccess.Read);
@@ -649,17 +649,17 @@ namespace ang
             {
                 MessageBox.Show("blad wywolania programu");
             }
-        } // second cosntructor
+        } // second cosntructor with parameters
 
         //stopWatch for cout time game
         private void stopWatch_Tick(object sender, EventArgs e)
         {
-            if(miliSekond>10)
+            if(miliSekond>9)
             {
                 sekond++;
                 miliSekond=0;
             }
-            toolStripStatusLabel2.Text = sekond+","+miliSekond.ToString();
+            toolStripStatusLabel2Time.Text = sekond+","+miliSekond.ToString();
             miliSekond++;
         }
 
