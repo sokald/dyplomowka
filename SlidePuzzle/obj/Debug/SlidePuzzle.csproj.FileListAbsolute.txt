@@ -33,3 +33,4 @@ C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\ob
 C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\bin\Debug\SlidePuzzle.exe.config
 C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\bin\Debug\SlidePuzzle.exe
 C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\bin\Debug\SlidePuzzle.pdb
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\obj\Debug\SlidePuzzle.csprojResolveAssemblyReference.cache

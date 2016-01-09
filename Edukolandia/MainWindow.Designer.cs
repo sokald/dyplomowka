@@ -41,6 +41,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,21 +71,21 @@
             // angielskiToolStripMenuItem
             // 
             this.angielskiToolStripMenuItem.Name = "angielskiToolStripMenuItem";
-            this.angielskiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.angielskiToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.angielskiToolStripMenuItem.Text = "Angielski";
             this.angielskiToolStripMenuItem.Click += new System.EventHandler(this.angielskiToolStripMenuItem_Click);
             // 
             // ortografiaToolStripMenuItem
             // 
             this.ortografiaToolStripMenuItem.Name = "ortografiaToolStripMenuItem";
-            this.ortografiaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ortografiaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.ortografiaToolStripMenuItem.Text = "Ortografia";
             this.ortografiaToolStripMenuItem.Click += new System.EventHandler(this.ortografiaToolStripMenuItem_Click);
             // 
             // puzzleToolStripMenuItem
             // 
             this.puzzleToolStripMenuItem.Name = "puzzleToolStripMenuItem";
-            this.puzzleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.puzzleToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.puzzleToolStripMenuItem.Text = "Puzzle";
             this.puzzleToolStripMenuItem.Click += new System.EventHandler(this.puzzleToolStripMenuItem_Click);
             // 
@@ -101,21 +102,21 @@
             // poziom1ToolStripMenuItem
             // 
             this.poziom1ToolStripMenuItem.Name = "poziom1ToolStripMenuItem";
-            this.poziom1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.poziom1ToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.poziom1ToolStripMenuItem.Text = "Poziom 1";
             this.poziom1ToolStripMenuItem.Click += new System.EventHandler(this.poziom1ToolStripMenuItem_Click);
             // 
             // poziom2ToolStripMenuItem
             // 
             this.poziom2ToolStripMenuItem.Name = "poziom2ToolStripMenuItem";
-            this.poziom2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.poziom2ToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.poziom2ToolStripMenuItem.Text = "Poziom 2";
             this.poziom2ToolStripMenuItem.Click += new System.EventHandler(this.poziom2ToolStripMenuItem_Click);
             // 
             // poziom3ToolStripMenuItem
             // 
             this.poziom3ToolStripMenuItem.Name = "poziom3ToolStripMenuItem";
-            this.poziom3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.poziom3ToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.poziom3ToolStripMenuItem.Text = "Poziom 3";
             this.poziom3ToolStripMenuItem.Click += new System.EventHandler(this.poziom3ToolStripMenuItem_Click);
             // 
@@ -149,11 +150,20 @@
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Location = new System.Drawing.Point(0, 49);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(284, 25);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -183,6 +193,7 @@
         private System.Windows.Forms.ToolStripMenuItem ortografiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puzzleToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolStrip2;
     }
 }
 

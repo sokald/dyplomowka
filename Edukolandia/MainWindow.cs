@@ -35,10 +35,6 @@ namespace Edukolandia
             {
                 startAng = new ang.startWindow(1);
                 startAng.Show();
-                //ang = new ang.Form1(1);
-                //ang.Size = new Size(295, 280);
-                //this.Enabled = false;
-                //ang.Show();
             }
 
             //level 2
@@ -118,7 +114,7 @@ namespace Edukolandia
             if (poziom1ToolStripMenuItem.Checked)
             {
                 startPuzzle = new SlidePuzzle.Puzzle(1);
-                startPuzzle.Size = new Size(200, 225);
+                startPuzzle.Size = new Size(205, 245);
                 startPuzzle.Show();
             }
 
@@ -126,7 +122,7 @@ namespace Edukolandia
             if (poziom2ToolStripMenuItem.Checked)
             {
                 startPuzzle = new SlidePuzzle.Puzzle(2);
-                startPuzzle.Size = new Size(255, 275);
+                startPuzzle.Size = new Size(260, 300);
                 startPuzzle.Show();
             }
 
@@ -134,7 +130,7 @@ namespace Edukolandia
             if (poziom3ToolStripMenuItem.Checked)
             {
                 startPuzzle = new SlidePuzzle.Puzzle(3);
-                startPuzzle.Size = new Size(315, 335);
+                startPuzzle.Size = new Size(315, 355);
                 startPuzzle.Show();
             }
         }     
