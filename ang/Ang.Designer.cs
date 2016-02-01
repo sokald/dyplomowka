@@ -32,7 +32,7 @@ namespace ang
         /// 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ang));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -41,11 +41,11 @@ namespace ang
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2Time = new System.Windows.Forms.ToolStripStatusLabel();
-            this.stopWatch = new System.Windows.Forms.Timer(this.components);
+            this.stopWatch = new System.Windows.Forms.Timer();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -160,14 +160,14 @@ namespace ang
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(100, 17);
-            this.toolStripStatusLabel1.Text = "Maciej Brant 2015";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(153, 17);
+            this.toolStripStatusLabel1.Text = "Maciej Brant 2015-2016 v0.1";
             // 
-            // toolStripStatusLabel2
+            // toolStripStatusLabel2Time
             // 
-            this.toolStripStatusLabel2Time.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2Time.Name = "toolStripStatusLabel2Time";
             this.toolStripStatusLabel2Time.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripStatusLabel2Time.Size = new System.Drawing.Size(159, 17);
+            this.toolStripStatusLabel2Time.Size = new System.Drawing.Size(75, 17);
             this.toolStripStatusLabel2Time.Spring = true;
             this.toolStripStatusLabel2Time.Text = "0.0";
             this.toolStripStatusLabel2Time.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -216,7 +216,7 @@ namespace ang
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // Form1
+            // Ang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -234,7 +234,8 @@ namespace ang
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Ang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eng";
             this.statusStrip1.ResumeLayout(false);

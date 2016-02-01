@@ -23,7 +23,6 @@ sekunda
 himalaje
 brzeg
 czub
-czyż
 pech
 chaszcze
 ukończony
@@ -33,7 +32,6 @@ pokój
 ósemka
 stóg
 hutnik
-deputat
 ubliżyć
 marzyć
 zachwyt
@@ -47,7 +45,6 @@ kradzież
 kątomierz
 komputer
 dedukcja
-rymarz
 dążyć
 buchać
 garaż
@@ -58,7 +55,6 @@ darzyć
 ołtarz
 rześki
 zapach
-wrzawa
 bagaż
 fucha
 ochota

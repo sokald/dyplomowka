@@ -18,13 +18,22 @@ namespace Edukolandia
         //Ortografia game    
         Ortografia.OrtGame startOrt;
 
+        //slide puzzle game
         SlidePuzzle.Puzzle startPuzzle;
+
+        Edukolandia.AboutTheAuthor AboutTheAuthorWindow;
 
         //open main window game
         public MainWindow()
         {
             InitializeComponent();
             poziom1ToolStripMenuItem.Checked = true;
+
+            // set game instruction  
+            label1.Text = "Aby zagrać wybierz poziom trudności z \ngórnego menu, a następnie wybierz grę";
+            
+            //set bacground color
+            this.BackColor = Color.FromArgb(174, 215, 211);
         }
 
         //run english game
@@ -114,7 +123,7 @@ namespace Edukolandia
             if (poziom1ToolStripMenuItem.Checked)
             {
                 startPuzzle = new SlidePuzzle.Puzzle(1);
-                startPuzzle.Size = new Size(205, 245);
+                startPuzzle.Size = new Size(210, 250);
                 startPuzzle.Show();
             }
 
@@ -133,6 +142,13 @@ namespace Edukolandia
                 startPuzzle.Size = new Size(315, 355);
                 startPuzzle.Show();
             }
+        }
+
+        private void oAutorzeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //open window with information abouth author
+            AboutTheAuthorWindow = new Edukolandia.AboutTheAuthor();
+            AboutTheAuthorWindow.Show();                   
         }     
     }
 }

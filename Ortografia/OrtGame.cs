@@ -36,6 +36,9 @@ namespace Ortografia
 
             InitializeComponent();
 
+            //set bacground color
+            this.BackColor = Color.FromArgb(174, 215, 211);
+
             //turn off left and right button
             btnLeft.Visible = btnRight.Visible = false;
 
@@ -73,7 +76,10 @@ namespace Ortografia
                 MessageBox.Show("Błąd odczytu pliku, program zostanie zamknięty");
                 this.Close();
             }
-
+            
+            //set bacground color
+            this.BackColor = Color.FromArgb(174, 215, 211);
+            
             //run game
             //Game();
         }
@@ -116,7 +122,7 @@ namespace Ortografia
                 {
                     if (word.Contains(tableWithCharacters[i]))
                     {
-                        word = word.Replace(tableWithCharacters[i], "-");
+                        word = word.Replace(tableWithCharacters[i], "_");
 
                         //random button with good answer
                         if (numberRandom.Next(2) == 0)

@@ -643,7 +643,10 @@ namespace ang
             //button10.Text = "10";
             //button11.Text = "11";
             //button12.Text = "12";             
-         
+            
+            //set bacground color
+            this.BackColor = Color.FromArgb(174, 215, 211);
+            
             //if is error
             if(lev != 1 && lev !=2 && lev != 3)
             {

@@ -102,6 +102,9 @@ namespace SlidePuzzle
         {
             InitializeComponent();
 
+            //set bacground color
+            this.BackColor = Color.FromArgb(174, 215, 211);
+            
             //declarate level in global varible
             level = lev;
 
@@ -587,7 +590,7 @@ namespace SlidePuzzle
                     switch (level)
                     {
                         case 1:
-                            game.Size = new Size(205, 245);
+                            game.Size = new Size(210, 250);
                             break;
                         case 2:
                             game.Size = new Size(260, 300);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrtGame));
             this.btnStart = new System.Windows.Forms.Button();
             this.lWord = new System.Windows.Forms.Label();
             this.btnLeft = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(98, 204);
+            this.btnStart.Location = new System.Drawing.Point(96, 167);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
@@ -60,9 +61,10 @@
             // 
             // btnLeft
             // 
-            this.btnLeft.Location = new System.Drawing.Point(33, 91);
+            this.btnLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnLeft.Location = new System.Drawing.Point(32, 112);
             this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(75, 23);
+            this.btnLeft.Size = new System.Drawing.Size(50, 40);
             this.btnLeft.TabIndex = 2;
             this.btnLeft.Text = "button2";
             this.btnLeft.UseVisualStyleBackColor = true;
@@ -70,9 +72,10 @@
             // 
             // btnRight
             // 
-            this.btnRight.Location = new System.Drawing.Point(177, 91);
+            this.btnRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnRight.Location = new System.Drawing.Point(175, 112);
             this.btnRight.Name = "btnRight";
-            this.btnRight.Size = new System.Drawing.Size(75, 23);
+            this.btnRight.Size = new System.Drawing.Size(50, 40);
             this.btnRight.TabIndex = 3;
             this.btnRight.Text = "button3";
             this.btnRight.UseVisualStyleBackColor = true;
@@ -83,7 +86,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 239);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 215);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(284, 22);
             this.statusStrip1.TabIndex = 4;
@@ -92,14 +95,14 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(97, 17);
-            this.toolStripStatusLabel1.Text = "Maciej Brant v0.1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(153, 17);
+            this.toolStripStatusLabel1.Text = "Maciej Brant 2015-2016 v0.1";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(141, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(116, 17);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.Text = "1/10";
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -108,15 +111,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 237);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnRight);
             this.Controls.Add(this.btnLeft);
             this.Controls.Add(this.lWord);
             this.Controls.Add(this.btnStart);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrtGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Ortografia";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);

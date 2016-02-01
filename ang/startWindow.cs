@@ -17,6 +17,9 @@ namespace ang
         public startWindow()
         {
             InitializeComponent();
+            
+            //set bacground color
+            this.BackColor = Color.FromArgb(174, 215, 211);
         }
 
         public startWindow(int lev)
@@ -25,6 +28,12 @@ namespace ang
             InitializeComponent();
             timer1.Start();
             i = 9;
+
+            // set label with instruction
+            LabeLWithInstruction.Text = "Znajdz wszystkie pary słów, \naby zakończyć grę";
+
+            //set bacground color
+            this.BackColor = Color.FromArgb(174, 215, 211);
         }
 
         private void button1_Click(object sender, EventArgs e)

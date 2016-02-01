@@ -1,12 +1,3 @@
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.OrtGame.resources
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.Properties.Resources.resources
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.csproj.GenerateResource.Cache
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\Ortografia.exe.config
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\Ortografia.exe
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\Ortografia.pdb
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.exe
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.pdb
-C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\words.txt
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\words.txt
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\Ortografia.exe.config
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\Ortografia.exe
@@ -17,3 +8,12 @@ C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.exe
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.pdb
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.csprojResolveAssemblyReference.cache
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\words.txt
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\Ortografia.exe.config
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\Ortografia.exe
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\bin\Debug\Ortografia.pdb
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.OrtGame.resources
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.Properties.Resources.resources
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.csproj.GenerateResource.Cache
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.exe
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\Ortografia\obj\Debug\Ortografia.pdb
