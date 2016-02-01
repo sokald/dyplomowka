@@ -83,6 +83,10 @@ namespace Ortografia
             //run game
             //Game();
         }
+    
+        //varibles with good and bad ansewer
+        int goodAnswer = 0;
+        int badAnsewer = 0;
 
         public void Game()
         {
@@ -132,12 +136,14 @@ namespace Ortografia
                             {
                                 btnLeft.Text = tableWithCharacters[i];
                                 btnRight.Text = tableWithCharacters[1 + i];
+                                goodAnswer++;
                                 break;
                             }
                             else
                             {
                                 btnLeft.Text = tableWithCharacters[i];
                                 btnRight.Text = tableWithCharacters[i - 1];
+                                badAnsewer++;
                                 break;
                             }
                         }
@@ -148,12 +154,14 @@ namespace Ortografia
                             {
                                 btnRight.Text = tableWithCharacters[i];
                                 btnLeft.Text = tableWithCharacters[1 + i];
+                                goodAnswer++;
                                 break;
                             }
                             else
                             {
                                 btnRight.Text = tableWithCharacters[i];
                                 btnLeft.Text = tableWithCharacters[i - 1];
+                                badAnsewer++;
                                 break;
                             }
                         }
@@ -166,7 +174,7 @@ namespace Ortografia
             {
                 DialogResult result;
                 //message box
-                result = MessageBox.Show("Brawo!! gra zakończona \n\nChcesz zagrać ponownie?", "koniec?", MessageBoxButtons.RetryCancel);
+                result = MessageBox.Show("Brawo!! gra zakończona \n\nstatystyki: \n\nilość dobrych odpowiedz: " + goodAnswer + "\nilość nie prawidłowych odpowiedzi:"+badAnsewer+"\n\nChcesz zagrać ponownie?", "koniec?", MessageBoxButtons.RetryCancel);
 
                 //return game
                 if (result == System.Windows.Forms.DialogResult.Retry)

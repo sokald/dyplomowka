@@ -36,3 +36,4 @@ C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\ob
 C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\obj\Debug\SlidePuzzle.csproj.GenerateResource.Cache
 C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\obj\Debug\SlidePuzzle.exe
 C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\obj\Debug\SlidePuzzle.pdb
+C:\Users\sokald\Documents\Visual Studio 2013\Projects\Edukolandia\SlidePuzzle\obj\Debug\SlidePuzzle.csprojResolveAssemblyReference.cache
